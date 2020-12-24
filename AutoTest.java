@@ -1,5 +1,6 @@
 import java.io.*;
 import java.util.*;
+import java.util.concurrent.TimeUnit;
 
 public class AutoTest{
     public static File[] getAllFiles(String path){
@@ -21,18 +22,18 @@ public class AutoTest{
         String src = (args.length==0)?".":args[0];
         File[] files = getAllFiles(src);
 
-        for(File f: files){
-            File testFile = new File(f.getAbsolutePath()+"/test/"+f.getName().replaceAll("-","_")+"_test.dart");
-            unSkipAllTests(testFile);
-        }
-
         // for(File f: files){
-        //     Process proc = Runtime.getRuntime()
-        //     .exec("pub get", null, new File(f.getAbsolutePath()));
-        //     printResult(proc);
-        //     Process proc2 = Runtime.getRuntime().exec("pub run test",null,new File(f.getAbsolutePath()));
-        //     printResult(proc2);
+        //     File testFile = new File(f.getAbsolutePath()+"/test/"+f.getName().replaceAll("-","_")+"_test.dart");
+        //     unSkipAllTests(testFile);
         // }
+
+        for(File f: files){
+            // Process proc = Runtime.getRuntime()
+            // .exec("pub get", null, new File(f.getAbsolutePath()));
+            // printResult(proc);
+            Process proc2 = Runtime.getRuntime().exec("pub run test",null,new File(f.getAbsolutePath()));
+            printResult(proc2,f.getAbsolutePath());
+        }
         
     }
     public static void unSkipAllTests(File file) throws IOException {
@@ -53,13 +54,27 @@ public class AutoTest{
         br.close();
         bw.close();
     }
-    public static void printResult(Process proc)throws IOException,InterruptedException{
+    public static void printResult(Process proc,String path)throws IOException,InterruptedException{
+        if(!proc.waitFor(10, TimeUnit.SECONDS)){
+            return ;
+        };
+        File pathFile = new File(path);
+        File logFile = new File(pathFile.getParent()+"/log_file.txt");
         BufferedReader br = new BufferedReader(new InputStreamReader(proc.getInputStream()));
+        BufferedWriter bw = new BufferedWriter(new FileWriter(logFile,true));
         String line ;
+        String remark = "All Tests passed";
+        bw.write(pathFile.getName()+"\n");
         while((line = br.readLine())!=null){
             System.out.println(line);
+            if(line.contains("tests failed.")){
+                remark = "Some tests failed.";
+                break;
+            }
         }
-        proc.waitFor();
+        bw.write("\t"+remark+"\n");
+        br.close();
+        bw.close();
         proc.destroy();
     }
 }

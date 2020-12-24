@@ -37,8 +37,8 @@ public class AutoTest{
     }
     public static void unSkipAllTests(File file) throws IOException {
         ArrayList<String> store = new ArrayList<>();
-        BufferedReader br = new BufferedReader(new FileInputStream(file));
-        BufferedWriter bw = new BufferedWriter(new FileOutputStream(file));
+        BufferedReader br = new BufferedReader(new FileReader(file));
+        BufferedWriter bw;
         String line;
         while((line = br.readLine())!=null){
             if(line.contains("skip: true")){
@@ -46,6 +46,7 @@ public class AutoTest{
             }
             store.add(line);
         }
+        bw = new BufferedWriter(new FileWriter(file));
         for(String val: store){
             bw.write(val+"\n");
         }

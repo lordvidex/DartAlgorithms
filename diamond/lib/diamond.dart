@@ -5,43 +5,44 @@ class Diamond {
         times = max - 64,
         left = max - 65,
         right = max - 65,
-        size = times*2-1,
+        size = times * 2 - 1,
         currCode = 65;
-    while(times-->0){
+    while (times-- > 0) {
       List<String> temp = [];
-      if(left==right){
-        for(int i = 0; i < size;i++){
-          if(i<left||i>left){
+      if (left == right) {
+        for (int i = 0; i < size; i++) {
+          if (i < left || i > left) {
             temp.add(' ');
-          }else{
+          } else {
             temp.add('A');
           }
         }
-      }else{
-        for(int i = 0; i < size;i++){
-          if(i<left){
+      } else {
+        for (int i = 0; i < size; i++) {
+          if (i < left) {
             temp.add(' ');
-          }else if(i==left){
+          } else if (i == left) {
             temp.add(String.fromCharCode(currCode));
-          }else {
-            if(i<right){
+          } else {
+            if (i < right) {
               temp.add(' ');
-            }else if(i==right){
+            } else if (i == right) {
               temp.add(String.fromCharCode(currCode));
-            }else{
+            } else {
               temp.add(' ');
             }
           }
         }
       }
       ans.add(temp.join());
-      left--;right++;currCode++;
+      left--;
+      right++;
+      currCode++;
     }
-    int pointer = ans.length - 1;
-    if (pointer != 0) {
-      while (pointer >= 0) {
-        ans.add(ans[--pointer]);
-      }
+    int pointer = ans.length - 2;
+    while (pointer >= 0) {
+      ans.add(ans[pointer]);
+      pointer--;
     }
     return ans;
   }

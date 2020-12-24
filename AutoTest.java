@@ -56,6 +56,8 @@ public class AutoTest{
     }
     public static void printResult(Process proc,String path)throws IOException,InterruptedException{
         if(!proc.waitFor(10, TimeUnit.SECONDS)){
+            System.out.println("Time exceeded");
+            Runtime.getRuntime().exec("kill " + proc.pid());
             return ;
         };
         File pathFile = new File(path);

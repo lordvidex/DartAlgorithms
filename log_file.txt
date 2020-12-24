@@ -1,0 +1,156 @@
+diamond
+	All Tests passed
+isbn-verifier
+	All Tests passed
+armstrong-numbers
+	All Tests passed
+difference-of-squares
+	All Tests passed
+rna-transcription
+	All Tests passed
+space-age
+	All Tests passed
+bob
+	All Tests passed
+phone-number
+	Some tests failed.
+anagram
+	Some tests failed.
+two-fer
+	All Tests passed
+resistor-color-duo
+	All Tests passed
+pascals-triangle
+	All Tests passed
+gigasecond
+	All Tests passed
+resistor-color
+	All Tests passed
+reverse-string
+	Some tests failed.
+triangle
+	All Tests passed
+scrabble-score
+	Some tests failed.
+hello-world
+	Some tests failed.
+leap
+	All Tests passed
+isogram
+	Some tests failed.
+hamming
+	Some tests failed.
+darts
+	All Tests passed
+raindrops
+	All Tests passed
+word-count
+	Some tests failed.
+prime-factors
+	All Tests passed
+nth-prime
+	All Tests passed
+diamond
+	All Tests passed
+isbn-verifier
+	All Tests passed
+armstrong-numbers
+	All Tests passed
+difference-of-squares
+	All Tests passed
+rna-transcription
+	All Tests passed
+space-age
+	All Tests passed
+bob
+	All Tests passed
+phone-number
+	All Tests passed
+anagram
+	Some tests failed.
+two-fer
+	All Tests passed
+resistor-color-duo
+	All Tests passed
+pascals-triangle
+	All Tests passed
+gigasecond
+	All Tests passed
+resistor-color
+	All Tests passed
+reverse-string
+	Some tests failed.
+triangle
+	All Tests passed
+scrabble-score
+	Some tests failed.
+hello-world
+	Some tests failed.
+leap
+	All Tests passed
+isogram
+	Some tests failed.
+hamming
+	Some tests failed.
+darts
+	All Tests passed
+raindrops
+	All Tests passed
+word-count
+	Some tests failed.
+prime-factors
+	All Tests passed
+nth-prime
+	All Tests passed
+diamond
+	All Tests passed
+isbn-verifier
+	All Tests passed
+armstrong-numbers
+	All Tests passed
+difference-of-squares
+	All Tests passed
+rna-transcription
+	All Tests passed
+space-age
+	All Tests passed
+bob
+	All Tests passed
+phone-number
+	All Tests passed
+anagram
+	Some tests failed.
+two-fer
+	All Tests passed
+resistor-color-duo
+	All Tests passed
+pascals-triangle
+	All Tests passed
+gigasecond
+	All Tests passed
+resistor-color
+	All Tests passed
+reverse-string
+	Some tests failed.
+triangle
+	All Tests passed
+scrabble-score
+	Some tests failed.
+hello-world
+	Some tests failed.
+leap
+	All Tests passed
+isogram
+	Some tests failed.
+hamming
+	Some tests failed.
+darts
+	All Tests passed
+raindrops
+	All Tests passed
+word-count
+	Some tests failed.
+prime-factors
+	All Tests passed
+nth-prime
+	All Tests passed

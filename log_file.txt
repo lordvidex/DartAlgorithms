@@ -13,7 +13,7 @@ space-age
 bob
 	All Tests passed
 phone-number
-	Some tests failed.
+	All Tests passed
 anagram
 	Some tests failed.
 two-fer
@@ -26,13 +26,7 @@ gigasecond
 	All Tests passed
 resistor-color
 	All Tests passed
-reverse-string
-	Some tests failed.
-triangle
-	All Tests passed
-scrabble-score
-	Some tests failed.
-hello-world
+reverhello-world
 	Some tests failed.
 leap
 	All Tests passed
